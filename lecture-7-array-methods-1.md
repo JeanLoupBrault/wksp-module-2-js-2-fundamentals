@@ -40,6 +40,9 @@ const lexicon = ['The', 'large', 'shaggy', 'dog', 'barked', 'at', 'the', 'silenc
 let sentence = lexicon.join();
 
 ```
+const lexicon = ['The', 'large', 'shaggy', 'dog', 'barked', 'at', 'the', 'silence'];
+
+let sentence = lexicon.shift();
 
 ---
 
@@ -58,10 +61,26 @@ Let's dip into the internet and see if we can learn all of these methods collect
 5. `.reverse()`, `.lastIndexOf()`
 6. `.splice()`, `.toString()`
 
+The shift() method removes the first item of an array.
+
+Note: This method changes the length of the array.
+
+Note: The return value of the shift method is the removed item.
+
+let love = ['I', 'love', 'programming'];
+
+let NewLove = love.shift();
+
+let fruits = ["Banana", "Orange", "Apple", "Mango"];
+let x = fruits.unshift();
+console.log(x);
+
 - Split into teams of 2.
 - Take given methods
     - find an explanation/definition, then write your own.
     - create two examples of each method in use. Be creative. 😛
+
+
 
 ---
 
