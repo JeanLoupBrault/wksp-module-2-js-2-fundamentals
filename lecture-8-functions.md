@@ -28,11 +28,13 @@
 
 ```js
 // Formula for area of circle
-
+Area = pi * radius * radius
 // Define JavaScript function
-
+function areaCircle(radius) {
+    return 3.14 * radius * radius;
+}
 // Call the JavaScript function
-
+areaCircle(10);
 ```
 
 ---
@@ -56,14 +58,22 @@
 
 ```js
 // Q1. Write a function that returns the sum of 3 numbers.
-
+function SumThreeNumbers(number1, number2, number3) {
+    return number1 + number2 + number3;
+}
 
 // Q2. Write a function that returns the square of a number minus twice the number.
-
+function SquareMinusTwice(number) {
+    return (number * number) - (number * 2);
+}
 
 // Q3. Write a function that returns the a person's full name, given their first and last names.
-
-
+function personName(firstName, lastName) {
+    const fullName = `${firstName} ${lastName}`;
+    return fullName;
+}
+personName(Jean-Loup, Brault)
+console.log(fullName);
 ```
 
 ---
@@ -72,10 +82,14 @@
 
 ```js
 // Q4. Write a function that returns the value of the tax for a given amount.
-
+function TaxAmount(price) {
+    return price  * 0.15;
+}
 
 // Q5. Write a function that returns the value 42.
-
+function TheAnswer() {
+    return 42;
+}
 
 // Q6. Write a function that returns "Hello!".
 

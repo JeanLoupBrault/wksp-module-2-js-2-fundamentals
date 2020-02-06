@@ -9,10 +9,26 @@
 // <100 is A
 
 // Write function here
+function calculateAverage(grade) {
+    let sum = 0;
+    grade.forEach(function(grade)  {
+        sum += grade;
+    });
 
+    return Math.round (sum / grade.length);
+}
+    function getLetterGrade(grade) {
+        let letterGrade = 'A';
 
+        if (grade < 90) letterGrade = 'B';
+        if (grade < 80) letterGrade = 'C';
+        if (grade < 70) letterGrade = 'D';
+        if (grade < 60) letterGrade = 'F';
+        
+        return letterGrade;
+    }
  
-// Call the function with [48, 95, 65, 48, 59, 78, 72, 65]
+console.log(getLetterGrade(calculateAverage([48, 95, 65, 48, 59, 78, 72, 65])));
 
 // Try with other values as well
 

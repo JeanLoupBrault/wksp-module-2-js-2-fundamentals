@@ -15,39 +15,80 @@ const enemies = "Tammy Gueterman, Evil Morty, Zeep Xanflorp, Galactic Federation
 const alternateRicks = 'Simple Rick, Slow Rick, Tall Rick, Cop Rick, Doofus Rick, Past Rick, Replacement Rick, Insurance Rick, Sales Rick, Supervisor Rick, Cool Rick, Cowboy Rick, Tiny Rick, Cronenberg Rick, Teacher Rick, Farmer Rick, Future Rick, Rick J22, Evil Rick, Toxic Rick, Crunk Rick, Pickle Rick, The Scientist Formerly Known as Rick, Rick C-137';
 const secret = "summerlobaconokfamily ascaryt mintergalactice, I'jerrym Pimortybethckle Rick!";
 const notCode = ['summer', 'bacon', 'scary', 'intergalactic', 'jerry', 'morty', 'beth', 'family'];
-
+const moneyBag = 342345645674563452412356756712313346456123;
 
 // Q1
 // How many names does Morty have? (use grandson)
-
-
+const mortyNamesArray = grandson.split(' ');
+const numberOfNames = mortyNamesArray.length;
+console.log(`A1) Morty has ${numberOfNames} names`);
 
 // Q2
 // Convert the alternateRicks string to an array. Console that array.
+const altRickArray = alternateRicks.split(', ');
+console.log('A2) ', altRickArray);
 
+const alternateRicksArray = alternateRicks.split(', ');
+console.log('A2) ', alternateRicksArray);
 
 
 // Q3
 // How many Ricks have been named in alternateRicks?
+let numberOfRicks = 0;
+for (let i = 0; i < alternateRicksArray.lenght; i++) {
+    if (alternateRicksArray[i].includes('Rick')) {
+        numberOfRicks = numberOfRicks + 1;
+    }
+}
+console.log(`A3) ${numberOfRicks} Ricks have been named in alternateRicks`);
 
+let numberOfRicks = 0;
+for (let i = 0; i < alternateRicksArray.length; i++) {
+    if (alternateRicksArray[i].includes('Rick')) {
+    numberOfRicks += 1;
+  }
+}
+console.log(`A3) ${numberOfRicks} Ricks have been named in alternateRicks`);
 
 
 // Q4
 // How many characters are there in rickSaying (without spaces)? 
-
-
-
-// Q4
-// Morty doesn't actually have a middle name. Console Morty's name without "Antoine".
-
-
+let rickSayingArray = rickSaying.split(' ');
+let characters = 0;
+for (let i = 0; i < rickSayingArray.length; i++) {
+    if(rickSayingArray[i] !== ' ') {
+        characters += 1;
+    }
+}
+console.log(`A4) There are ${characters} characters in rickSaying`)
 
 // Q5
+// Morty doesn't actually have a middle name. Console Morty's name without "Antoine".
+const withoutMiddleName = grandson.replace('Antoine ', '');
+console.log(`A5) ${withoutMiddleName}`);
+
+console.log(`A5) ${mortyNamesArray[0]} ${mortyNamesArray[2]}`); //without string methods
+
+const actualMortyName = grandson.replace('Antoine ', ''); //include one of the spaces
+console.log(`A5) ${actualMortyName}`);
+
+// Q6
+// How many digits are there in moneyBag?
+//Hacky way since to toString() returns a scientific notation for extremely large values
+const nbDigits = moneyBag.toString().split('e+');
+console.log('A6)', parseInt(nbDigits[1]) + 1);
+
+
+// Q7
 // Decode and console. the secret!
 // To do so, you will need to remove all of the notCode words.
+let decodedMsg = secret;
+for (let i = 0; i < notCode.length(); i++) {
+    decodedMsg = decodedMsg.replace(notCode[i], '');
+}
+console.log(`A7) The secret is ${decodedMsg}`);
 
-
-
-// Q6 (challenge)
+// Q8 (challenge)
 // Scary Terry is actually not an enemy. Remove him from the list and console only Rick's true enemies.
-
+const actualEnemy = enemies.replace('Scary Terry, ', '');
+console.log(`A8) ${actualEnemy}`);
